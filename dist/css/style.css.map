@@ -1,0 +1,1 @@
+{"version":3,"sources":["base.scss"],"names":[],"mappings":"AAAA,EACE,OAAO,EACP,QAAQ,EACR,WAAW,WAEb,aACE,WAAY,OACZ,MAAM,KACN,WAAY","file":"style.css","sourcesContent":["*{\r\n  margin:0;\r\n  padding:0;\r\n  box-sizing:border-box;\r\n}\r\n.text-center{\r\n  text-align: center; \r\n  color:#000000; \r\n  margin-top: 50px;\r\n}         \r\n\r\n"]}

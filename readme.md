@@ -27,6 +27,8 @@ yarn install
 ## npm install
 ```
 
+> 下面两步需要开启两个 bash，一个用来跑 `gulp-task` 另外一个用来跑 `live-server`
+
 ### 开启 `gulp-task`
 
 ```bash

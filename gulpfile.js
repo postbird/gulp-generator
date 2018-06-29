@@ -114,17 +114,19 @@ gulp.task('watchless', function () {
 });
 // watch sass
 gulp.task('watchscss',function(){
-   gulp.watch('src/scss/**/style.scss',function(event){
+   gulp.watch('src/scss/**/*.scss',function(event){
        const paths = watchPath(event,'src/scss/','dist/css/');
        gutil.log(gutil.colors.green(event.type) + ' ' + paths.srcPath);
        gutil.log('Dist: ' + paths.distDir);
+       paths.srcPath = 'src\\scss\\style.scss';
+    //    if(paths.srcPath !== 'src\\scss\\style.scss') return false;
        const combined = combiner.obj([
-           gulp.src(paths.srcPath),
+           gulp.src(paths.srcPath),   
            sourcemaps.init(),
            autoprefixer({
                browsers: 'last 2 versions'
            }),
-           sass(),
+           sass(), 
            cleancss(),
            sourcemaps.write('./'),
            gulp.dest(paths.distDir)
@@ -140,12 +142,12 @@ gulp.task('scsscss', function () {
         autoprefixer({
             browsers: 'last 2 versions'
         }),
-        sass(),
+        sass(), 
         cleancss(),
         sourcemaps.write('./'),
         gulp.dest('dist/css')
 
-    ]);
+    ]); 
     combined.on('error', handleError);
 });
 // watch image
