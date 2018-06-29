@@ -18,6 +18,9 @@ npm i -g gulp live-server
 
 ### 克隆项目：
 
+```bash
+git clone https://github.com/postbird/gulp-generator.git
+```
 
 ### 安装依赖
 
